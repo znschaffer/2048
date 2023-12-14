@@ -1,5 +1,5 @@
 body {
-  font-family: "New York";
+  font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
 }
 
 body div {
@@ -40,6 +40,8 @@ body div {
   margin: auto;
   opacity: 0;
   transition: opacity 0.08s ease;
-  font-family: "New York";
+
+  font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
+
   font-size: 4rem;
 }
