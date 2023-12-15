@@ -1,10 +1,11 @@
-* {
+html {
   touch-action: none;
+  overscroll-behavior: none;
+  overflow-y: hidden;
 }
 
 body {
   font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
-  overflow-y: hidden;
 }
 
 body div {
