@@ -1,4 +1,8 @@
 const gameboard = document.getElementById("gameboard");
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
 function setup() {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
@@ -15,6 +19,29 @@ function setup() {
 
   // setup listeners
   document.addEventListener("keyup", movePieces);
+  document.addEventListener("touchstart", (event) => {
+    console.log("touched", event);
+    touchStartX = event.changedTouches[0].screenX;
+    touchStartY = event.changedTouches[0].screenY;
+  });
+  document.addEventListener("touchend", (event) => {
+    console.log("touch released", event);
+    touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+
+    if (touchEndX < touchStartX) {
+      movePieces({ key: "ArrowLeft" });
+    }
+    if (touchEndX > touchStartX) {
+      movePieces({ key: "ArrowRight" });
+    }
+    if (touchEndY < touchStartY) {
+      movePieces({ key: "ArrowUp" });
+    }
+    if (touchEndY > touchStartY) {
+      movePieces({ key: "ArrowDown" });
+    }
+  });
 }
 
 colors = [

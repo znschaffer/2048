@@ -10,7 +10,7 @@ body div {
 }
 
 #title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #gameboard {
@@ -19,8 +19,10 @@ body div {
   padding: 4rem;
   margin: auto;
   display: grid;
-  height: 30rem;
-  width: 30rem;
+  max-height: 30rem;
+  max-width: 30rem;
+  width: 50vw;
+  height: 50vw;
   gap: 1px;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 }
@@ -43,5 +45,5 @@ body div {
 
   font-family: -apple-system-ui-serif, ui-serif, "Georgia", serif;
 
-  font-size: 4rem;
+  font-size: 2rem;
 }
