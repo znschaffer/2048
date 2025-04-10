@@ -2,6 +2,8 @@
 
 A minimal 2048 clone built entirely with vanilla JavaScript. No libraries, no frameworks — just clean DOM manipulation, smooth animations, and a bit of logic. Touch and keyboard controls supported.
 
+[Play Here!](https://2048.znschaffer.com/)
+
 ## 🎮 Features
 
 - 4×4 grid with merge and slide mechanics
